@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Dwivedi - Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <h1 id="logo"><a href="#home">Harsh Dwivedi</a></h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <h1>Data Analyst & Computer Science Student</h1>
+                <p>Transforming data into insights | Undergraduate at Deakin University</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2><i class="fas fa-user"></i> About Me</h2>
+                <p>I'm Harsh Dwivedi, a passionate data analyst and computer science student at Deakin University. With a strong foundation in programming and data analysis, I'm on a journey to turn complex data into actionable insights.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2><i class="fas fa-cogs"></i> Skills</h2>
+                <div class="skill-group">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <p>Python, R, C, C++, JavaScript, SQL, NoSQL</p>
+                </div>
+                <div class="skill-group">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <p>VS Code, Microsoft Power BI, Tableau, VBA</p>
+                </div>
+                <div class="skill-group">
+                    <h3><i class="fas fa-laptop-code"></i> Technologies/Libraries</h3>
+                    <p>ReactJS, Git, MongoDB, scikit-learn, TensorFlow, Keras, PyTorch</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+                <div class="project">
+                    <h3><i class="fas fa-wallet"></i> Personal Finance Assistant</h3>
+                    <p>Python, Pandas, Scikit-learn, Flask, HTML, CSS</p>
+                    <ul>
+                        <li>Developed a system to predict monthly expenses based on past spending habits and upcoming commitments.</li>
+                        <li>Used Python for data analysis and Scikit-learn for predictive modeling.</li>
+                        <li>Integrated the model into a Flask web app for real-time data visualization.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3><i class="fas fa-cloud-sun"></i> Weather App</h3>
+                    <p>OpenWeatherMap API, JavaScript, CSS, HTML</p>
+                    <ul>
+                        <li>Built a web application that forecasts the weather of a given city.</li>
+                        <li>Implemented using OpenWeatherMap API, JavaScript, HTML5, and CSS3.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2><i class="fas fa-envelope"></i> Contact</h2>
+                <p><i class="fas fa-envelope"></i> Email: harshinfinity09@gmail.com</p>
+                <p><i class="fas fa-phone"></i> Phone: 0475 759 542</p>
+                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/harshdwivedi050/" target="_blank">https://www.linkedin.com/in/harshdwivedi050/</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Harsh Dwivedi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
+    <script>
+        // Initialize smooth scroll
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 800,
+            speedAsDuration: true
+        });
+
+        // Sticky navbar
+        window.onscroll = function() {stickyNavbar()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function stickyNavbar() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>
