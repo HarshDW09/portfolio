@@ -3,118 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsh Dwivedi - Data Analyst Portfolio</title>
-    <link rel="stylesheet" href="job.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Harsh Dwivedi - Data Science Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav id="navbar">
-            <div class="container">
-                <h1 id="logo"><a href="#home">Harsh Dwivedi</a></h1>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <a href="#" class="flex items-center py-4">
+                        <span class="font-semibold text-gray-800 text-lg">Harsh Dwivedi</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-1">
+                    <a href="#home" class="py-4 px-2 text-gray-800 hover:text-blue-500 transition duration-300">Home</a>
+                    <a href="#about" class="py-4 px-2 text-gray-800 hover:text-blue-500 transition duration-300">About</a>
+                    <a href="#skills" class="py-4 px-2 text-gray-800 hover:text-blue-500 transition duration-300">Skills</a>
+                    <a href="#projects" class="py-4 px-2 text-gray-800 hover:text-blue-500 transition duration-300">Projects</a>
+                    <a href="#contact" class="py-4 px-2 text-gray-800 hover:text-blue-500 transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 pb-12 bg-gradient-to-r from-blue-500 to-blue-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Data Science & Analytics</h1>
+                <p class="text-xl md:text-2xl mb-8">Transforming Data into Insights | Computer Science Student at Deakin University</p>
+                <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition duration-300">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="text-lg text-gray-700 leading-relaxed">
+                <p class="mb-4">I'm a third-year Computer Science student at Deakin University, specializing in Data Science. My passion lies in leveraging data-driven insights to solve complex problems and create impactful solutions.</p>
+                <p>With experience in both academic projects and professional IT support, I combine technical expertise with practical problem-solving skills. I'm particularly interested in:</p>
+                <ul class="list-disc list-inside mt-4 space-y-2">
+                    <li>Data Analysis & Machine Learning</li>
+                    <li>Predictive Modeling</li>
+                    <li>Full Stack Development</li>
+                    <li>Cloud Computing & DevOps</li>
                 </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </section>
 
-    <main>
-        <section id="home">
-            <div class="container">
-                <h1>Data Analyst & Computer Science Student</h1>
-                <p>Transforming data into insights | Undergraduate at Deakin University</p>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2><i class="fas fa-user"></i> About Me</h2>
-                <p>I'm Harsh Dwivedi, a passionate data analyst and computer science student at Deakin University. With a strong foundation in programming and data analysis, I'm on a journey to turn complex data into actionable insights.</p>
-            </div>
-        </section>
-
-        <section id="skills">
-            <div class="container">
-                <h2><i class="fas fa-cogs"></i> Skills</h2>
-                <div class="skill-group">
-                    <h3><i class="fas fa-code"></i> Languages</h3>
-                    <p>Python, R, C, C++, JavaScript, SQL, NoSQL</p>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Programming Languages</h3>
+                    <div class="space-y-2">
+                        <p class="flex items-center"><i class="fas fa-code mr-2 text-blue-500"></i>Python, R, Java</p>
+                        <p class="flex items-center"><i class="fas fa-code mr-2 text-blue-500"></i>C/C++, SQL</p>
+                        <p class="flex items-center"><i class="fas fa-code mr-2 text-blue-500"></i>JavaScript</p>
+                    </div>
                 </div>
-                <div class="skill-group">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <p>VS Code, Microsoft Power BI, Tableau, VBA</p>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Frameworks & Tools</h3>
+                    <div class="space-y-2">
+                        <p class="flex items-center"><i class="fas fa-tools mr-2 text-blue-500"></i>React, Node.js, Flask</p>
+                        <p class="flex items-center"><i class="fas fa-tools mr-2 text-blue-500"></i>Docker, Git</p>
+                        <p class="flex items-center"><i class="fas fa-tools mr-2 text-blue-500"></i>Tableau, Power BI</p>
+                    </div>
                 </div>
-                <div class="skill-group">
-                    <h3><i class="fas fa-laptop-code"></i> Technologies/Libraries</h3>
-                    <p>ReactJS, Git, MongoDB, scikit-learn, TensorFlow, Keras, PyTorch</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2><i class="fas fa-project-diagram"></i> Projects</h2>
-                <div class="project">
-                    <h3><i class="fas fa-wallet"></i> Personal Finance Assistant</h3>
-                    <p>Python, Pandas, Scikit-learn, Flask, HTML, CSS</p>
-                    <ul>
-                        <li>Developed a system to predict monthly expenses based on past spending habits and upcoming commitments.</li>
-                        <li>Used Python for data analysis and Scikit-learn for predictive modeling.</li>
-                        <li>Integrated the model into a Flask web app for real-time data visualization.</li>
-                    </ul>
-                </div>
-                <div class="project">
-                    <h3><i class="fas fa-cloud-sun"></i> Weather App</h3>
-                    <p>OpenWeatherMap API, JavaScript, CSS, HTML</p>
-                    <ul>
-                        <li>Built a web application that forecasts the weather of a given city.</li>
-                        <li>Implemented using OpenWeatherMap API, JavaScript, HTML5, and CSS3.</li>
-                    </ul>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Data Science</h3>
+                    <div class="space-y-2">
+                        <p class="flex items-center"><i class="fas fa-brain mr-2 text-blue-500"></i>scikit-learn, TensorFlow</p>
+                        <p class="flex items-center"><i class="fas fa-brain mr-2 text-blue-500"></i>pandas, NumPy</p>
+                        <p class="flex items-center"><i class="fas fa-brain mr-2 text-blue-500"></i>Matplotlib, Keras</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact">
-            <div class="container">
-                <h2><i class="fas fa-envelope"></i> Contact</h2>
-                <p><i class="fas fa-envelope"></i> Email: harshinfinity09@gmail.com</p>
-                <p><i class="fas fa-phone"></i> Phone: 0475 759 542</p>
-                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/harshdwivedi050/" target="_blank">https://www.linkedin.com/in/harshdwivedi050/</a></p>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Personal Finance Assistant</h3>
+                    <p class="text-gray-600 mb-4">A machine learning-powered system for predicting monthly expenses and providing financial insights.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Scikit-learn</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Flask</span>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Weather App</h3>
+                    <p class="text-gray-600 mb-4">A web application that provides real-time weather forecasts with geolocation support.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">HTML/CSS</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">API Integration</span>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <div class="container">
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+            <div class="flex flex-col items-center space-y-4">
+                <a href="mailto:harshinfinity09@gmail.com" class="flex items-center text-gray-700 hover:text-blue-500">
+                    <i class="fas fa-envelope mr-2"></i>
+                    harshinfinity09@gmail.com
+                </a>
+                <a href="tel:0475759542" class="flex items-center text-gray-700 hover:text-blue-500">
+                    <i class="fas fa-phone mr-2"></i>
+                    0475 759 542
+                </a>
+                <a href="https://www.linkedin.com/in/harshdwivedi050/" target="_blank" class="flex items-center text-gray-700 hover:text-blue-500">
+                    <i class="fab fa-linkedin mr-2"></i>
+                    LinkedIn Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
             <p>&copy; 2024 Harsh Dwivedi. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
-    <script>
-        // Initialize smooth scroll
-        var scroll = new SmoothScroll('a[href*="#"]', {
-            speed: 800,
-            speedAsDuration: true
-        });
-
-        // Sticky navbar
-        window.onscroll = function() {stickyNavbar()};
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-        function stickyNavbar() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script>
 </body>
 </html>
-
