@@ -1,262 +1,52 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Calendar, GitHub, Linkedin } from 'lucide-react';
-
-const Portfolio = () => {
-  const [activeTab, setActiveTab] = useState('about');
-
-  return (
-    <div className="min-h-screen bg-gray-100">
-      {/* Sidebar */}
-      <aside className="fixed w-72 h-screen bg-white p-6 shadow-lg">
-        <div className="text-center">
-          <div className="w-32 h-32 mx-auto rounded-full bg-gray-200 mb-4">
-            <img src="/api/placeholder/128/128" alt="Harsh Dwivedi" className="rounded-full" />
-          </div>
-          <h1 className="text-xl font-bold">Harsh Dwivedi</h1>
-          <p className="text-gray-600">Computer Science Student</p>
-          
-          <div className="mt-6">
-            <div className="flex items-center mb-3">
-              <Mail className="w-5 h-5 mr-2" />
-              <a href="mailto:harshinfinity09@gmail.com" className="text-blue-600">harshinfinity09@gmail.com</a>
-            </div>
-            <div className="flex items-center mb-3">
-              <Phone className="w-5 h-5 mr-2" />
-              <span>0475 759 542</span>
-            </div>
-            <div className="flex items-center mb-3">
-              <MapPin className="w-5 h-5 mr-2" />
-              <span>Melbourne, VIC</span>
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      {/* Main Content */}
-      <main className="ml-72 p-8">
-        {/* Navigation */}
-        <nav className="mb-8">
-          <ul className="flex space-x-4">
-            {['about', 'resume', 'projects'].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-4 py-2 rounded ${
-                  activeTab === tab ? 'bg-blue-600 text-white' : 'bg-gray-200'
-                }`}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
-          </ul>
-        </nav>
-
-        {/* About Section */}
-        {activeTab === 'about' && (
-          <section className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-2xl font-bold mb-4">About Me</h2>
-            <p className="text-gray-700">
-              A highly motivated third-year Bachelor of Computer Science student at Deakin University, 
-              specializing in Data Science, with a passion for leveraging data-driven insights to solve 
-              complex problems.
-            </p>
-          </section>
-        )}
-
-        {/* Resume Section */}
-        {activeTab === 'resume' && (
-          <section className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-2xl font-bold mb-6">Experience</h2>
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold">Junior IT Support</h3>
-              <p className="text-gray-600">Infinitude Logistics Pvt. Ltd. | 2021 - 2022</p>
-              <ul className="list-disc ml-5 mt-2">
-                <li>Enforced cybersecurity policies for company accounts</li>
-                <li>Reduced IT costs by 20% through cloud-based solutions</li>
-                <li>Trained employees on new software applications</li>
-              </ul>
-            </div>
-            
-            <h2 className="text-2xl font-bold mb-6">Education</h2>
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold">Bachelor of Computer Science</h3>
-              <p className="text-gray-600">Deakin University | 2022 - 2025</p>
-              <p>Major in Data Science</p>
-            </div>
-          </section>
-        )}
-
-        {/* Projects Section */}
-        {activeTab === 'projects' && (
-          <section className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-2xl font-bold mb-6">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="border p-4 rounded">
-                <h3 className="text-xl font-semibold">Personal Finance Assistant</h3>
-                <p className="text-gray-600">Python, Pandas, Scikit-learn, Flask, Docker</p>
-                <p className="mt-2">Developed a system to predict monthly expenses based on past spending habits.</p>
-              </div>
-              <div className="border p-4 rounded">
-                <h3 className="text-xl font-semibold">Weather App</h3>
-                <p className="text-gray-600">OpenWeatherMap API, JavaScript, CSS, HTML</p>
-                <p className="mt-2">Built a web application that forecasts the weather of a given city.</p>
-              </div>
-            </div>
-          </section>
-        )}
-      </main>
-    </div>
-  );
-};
-
-export default Portfolio;
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsh Dwivedi - Data Science Portfolio</title>
+    <title>Harsh Dwivedi - Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-10">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between">
-                <div class="flex space-x-7">
-                    <a href="#" class="flex items-center py-4">
-                        <span class="font-semibold text-gray-800 text-lg">Harsh Dwivedi</span>
-                    </a>
-                </div>
-                <div class="flex items-center space-x-1">
-                    <a href="#home" class="py-4 px-2 text-gray-800 hover:text-blue-500 transition duration-300">Home</a>
-                    <a href="#about" class="py-4 px-2 text-gray-800 hover:text-blue-500 transition duration-300">About</a>
-                    <a href="#skills" class="py-4 px-2 text-gray-800 hover:text-blue-500 transition duration-300">Skills</a>
-                    <a href="#projects" class="py-4 px-2 text-gray-800 hover:text-blue-500 transition duration-300">Projects</a>
-                    <a href="#contact" class="py-4 px-2 text-gray-800 hover:text-blue-500 transition duration-300">Contact</a>
-                </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-info">
+            <div class="avatar-box">
+                <img src="path-to-avatar.jpg" alt="Harsh Dwivedi">
+            </div>
+            <div class="info-content">
+                <h1 class="name">Harsh Dwivedi</h1>
+                <p class="title">Computer Science Student</p>
             </div>
         </div>
-    </nav>
+    </aside>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-20 pb-12 bg-gradient-to-r from-blue-500 to-blue-700">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-            <div class="text-center text-white">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Data Science & Analytics</h1>
-                <p class="text-xl md:text-2xl mb-8">Transforming Data into Insights | Computer Science Student at Deakin University</p>
-                <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition duration-300">Get in Touch</a>
-            </div>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="about">
+            <h1 class="article-title">About Me</h1>
+            <p class="about-text">
+                A highly motivated third-year Bachelor of Computer Science student specializing in Data Science,
+                with a passion for leveraging data-driven insights to solve complex problems.
+            </p>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
-            <div class="text-lg text-gray-700 leading-relaxed">
-                <p class="mb-4">I'm a third-year Computer Science student at Deakin University, specializing in Data Science. My passion lies in leveraging data-driven insights to solve complex problems and create impactful solutions.</p>
-                <p>With experience in both academic projects and professional IT support, I combine technical expertise with practical problem-solving skills. I'm particularly interested in:</p>
-                <ul class="list-disc list-inside mt-4 space-y-2">
-                    <li>Data Analysis & Machine Learning</li>
-                    <li>Predictive Modeling</li>
-                    <li>Full Stack Development</li>
-                    <li>Cloud Computing & DevOps</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Programming Languages</h3>
-                    <div class="space-y-2">
-                        <p class="flex items-center"><i class="fas fa-code mr-2 text-blue-500"></i>Python, R, Java</p>
-                        <p class="flex items-center"><i class="fas fa-code mr-2 text-blue-500"></i>C/C++, SQL</p>
-                        <p class="flex items-center"><i class="fas fa-code mr-2 text-blue-500"></i>JavaScript</p>
-                    </div>
+        <section class="projects">
+            <h1 class="article-title">Projects</h1>
+            <div class="project-list">
+                <div class="project-item">
+                    <img src="path-to-project1.jpg" alt="Project 1" class="project-img">
+                    <div class="project-item-icon-box">🔗</div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Frameworks & Tools</h3>
-                    <div class="space-y-2">
-                        <p class="flex items-center"><i class="fas fa-tools mr-2 text-blue-500"></i>React, Node.js, Flask</p>
-                        <p class="flex items-center"><i class="fas fa-tools mr-2 text-blue-500"></i>Docker, Git</p>
-                        <p class="flex items-center"><i class="fas fa-tools mr-2 text-blue-500"></i>Tableau, Power BI</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Data Science</h3>
-                    <div class="space-y-2">
-                        <p class="flex items-center"><i class="fas fa-brain mr-2 text-blue-500"></i>scikit-learn, TensorFlow</p>
-                        <p class="flex items-center"><i class="fas fa-brain mr-2 text-blue-500"></i>pandas, NumPy</p>
-                        <p class="flex items-center"><i class="fas fa-brain mr-2 text-blue-500"></i>Matplotlib, Keras</p>
-                    </div>
+                <div class="project-item">
+                    <img src="path-to-project2.jpg" alt="Project 2" class="project-img">
+                    <div class="project-item-icon-box">🔗</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Personal Finance Assistant</h3>
-                    <p class="text-gray-600 mb-4">A machine learning-powered system for predicting monthly expenses and providing financial insights.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Scikit-learn</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Flask</span>
-                    </div>
-                </div>
-                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Weather App</h3>
-                    <p class="text-gray-600 mb-4">A web application that provides real-time weather forecasts with geolocation support.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">JavaScript</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">HTML/CSS</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">API Integration</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
-            <div class="flex flex-col items-center space-y-4">
-                <a href="mailto:harshinfinity09@gmail.com" class="flex items-center text-gray-700 hover:text-blue-500">
-                    <i class="fas fa-envelope mr-2"></i>
-                    harshinfinity09@gmail.com
-                </a>
-                <a href="tel:0475759542" class="flex items-center text-gray-700 hover:text-blue-500">
-                    <i class="fas fa-phone mr-2"></i>
-                    0475 759 542
-                </a>
-                <a href="https://www.linkedin.com/in/harshdwivedi050/" target="_blank" class="flex items-center text-gray-700 hover:text-blue-500">
-                    <i class="fab fa-linkedin mr-2"></i>
-                    LinkedIn Profile
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p>&copy; 2024 Harsh Dwivedi. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>
->>>>>>> 6d6204867f02f5d82f89ab5dbe7ddf954dadd01f
