@@ -1,52 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsh Dwivedi - Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harsh Dwivedi - Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="assets/js/script.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="bg-gray-50">
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <div class="sidebar-info">
-            <div class="avatar-box">
-                <img src="path-to-avatar.jpg" alt="Harsh Dwivedi">
-            </div>
-            <div class="info-content">
-                <h1 class="name">Harsh Dwivedi</h1>
-                <p class="title">Computer Science Student</p>
-            </div>
-        </div>
-    </aside>
+<body>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <section class="about">
-            <h1 class="article-title">About Me</h1>
-            <p class="about-text">
-                A highly motivated third-year Bachelor of Computer Science student specializing in Data Science,
-                with a passion for leveraging data-driven insights to solve complex problems.
-            </p>
-        </section>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h1 class="name">Harsh Dwivedi</h1>
+    <p class="title">Computer Science Student</p>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </aside>
 
-        <section class="projects">
-            <h1 class="article-title">Projects</h1>
-            <div class="project-list">
-                <div class="project-item">
-                    <img src="path-to-project1.jpg" alt="Project 1" class="project-img">
-                    <div class="project-item-icon-box">🔗</div>
-                </div>
-                <div class="project-item">
-                    <img src="path-to-project2.jpg" alt="Project 2" class="project-img">
-                    <div class="project-item-icon-box">🔗</div>
-                </div>
-            </div>
-        </section>
-    </main>
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- About Section -->
+    <section class="section" id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm a third-year Computer Science student at Deakin University, specializing in Data Science. I love solving
+        complex problems using data-driven insights and building intuitive, user-friendly solutions.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <p><strong>Personal Finance Assistant:</strong> A system to predict monthly expenses using Python, Flask, and
+            Machine Learning.</p>
+        </li>
+        <li>
+          <p><strong>Weather App:</strong> A web application to forecast the weather using HTML, CSS, JavaScript, and
+            OpenWeatherMap API.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:harshinfinity09@gmail.com">harshinfinity09@gmail.com</a></p>
+      <p>Phone: <a href="tel:+61475759542">+61 475 759 542</a></p>
+      <a href="https://linkedin.com" target="_blank" class="btn">Visit LinkedIn</a>
+    </section>
+  </div>
 
 </body>
+
 </html>
